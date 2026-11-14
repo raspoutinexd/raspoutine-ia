@@ -1,1 +1,126 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <title>RASPOUTINE AI ULTIMATE</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">R</div>
+      <div>
+        <strong>RASPOUTINE AI</strong>
+        <small>ULTIMATE</small>
+      </div>
+    </div>
+
+    <button id="newChat" class="new-chat">
+      + Nouvelle conversation
+    </button>
+
+    <div class="side-title">HISTORIQUE</div>
+    <div id="history" class="history"></div>
+
+    <div class="sidebar-bottom">
+      <div class="profile">
+        <div class="avatar">R</div>
+        <div>
+          <strong>RASPOUTINE</strong>
+          <small>Assistant IA</small>
+        </div>
+      </div>
+      <button id="settingsBtn" class="settings">
+        ⚙ Paramètres
+      </button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <span class="mobile-brand">RASPOUTINE AI</span>
+      <div class="model">
+        <span class="online-dot"></span>
+        ULTIMATE ENGINE
+      </div>
+      <button id="clearBtn" class="clear">
+        Effacer
+      </button>
+    </header>
+
+    <section id="conversation" class="conversation">
+
+      <div id="welcome" class="welcome">
+        <div class="welcome-logo">R</div>
+
+        <h1>RASPOUTINE <span>AI</span></h1>
+        <p>Ton assistant. Tes idées. Tes projets.</p>
+
+        <div class="suggestions">
+          <button data-prompt="Crée-moi un site web moderne en HTML CSS et JavaScript.">
+            <span>✦</span> Créer un site web
+          </button>
+
+          <button data-prompt="Aide-moi à développer un projet Python.">
+            <span>⌘</span> Programmer un projet
+          </button>
+
+          <button data-prompt="Explique-moi comment fonctionne une intelligence artificielle.">
+            <span>◈</span> Explorer l'IA
+          </button>
+
+          <button data-prompt="Donne-moi des idées de projets originaux.">
+            <span>⚡</span> Trouver une idée
+          </button>
+        </div>
+      </div>
+
+      <div id="messages"></div>
+
+    </section>
+
+    <div class="composer-area">
+      <form id="chatForm" class="composer">
+        <textarea
+          id="prompt"
+          placeholder="Demande quelque chose à RASPOUTINE..."
+          rows="1"
+          required
+        ></textarea>
+
+        <button id="sendBtn" type="submit">↑</button>
+      </form>
+
+      <div class="disclaimer">
+        RASPOUTINE AI ULTIMATE · Vérifie les informations importantes.
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<div id="settingsModal" class="modal">
+  <div class="modal-box">
+    <button id="closeSettings" class="close">✕</button>
+
+    <h2>Paramètres</h2>
+    <p>Personnalise ton assistant.</p>
+
+    <label for="assistantName">Nom de l'assistant</label>
+    <input id="assistantName" value="RASPOUTINE AI">
+
+    <button id="saveSettings">Enregistrer</button>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
+
